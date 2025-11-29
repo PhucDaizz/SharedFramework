@@ -1,4 +1,4 @@
-# SharedFramework 🏗️
+# Nexus.Microservices 🏗️
 
 SharedFramework được thiết kế tối ưu cho hệ thống Microservices. Thư viện cung cấp các thành phần cấu hình sẵn (pre-configured) giúp tích hợp RabbitMQ mạnh mẽ (tự động kết nối lại, chịu lỗi tốt) và chuẩn hóa API Response, giúp team tập trung vào logic nghiệp vụ thay vì tốn thời gian xử lý hạ tầng.
 
@@ -28,7 +28,7 @@ Chỉ cần 1 dòng code cấu hình.
 Cài đặt package thông qua NuGet Package Manager hoặc giao diện dòng lệnh (CLI):
 
 ```bash
-dotnet add package SharedFrameworkFast
+dotnet add package Nexus.Microservices
 ```
 
 ### Cấu hình
