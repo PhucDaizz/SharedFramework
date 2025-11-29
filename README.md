@@ -28,7 +28,7 @@ Chỉ cần 1 dòng code cấu hình.
 Cài đặt package thông qua NuGet Package Manager hoặc giao diện dòng lệnh (CLI):
 
 ```bash
-dotnet add package Nexus.Microservices
+dotnet add package Nexus.BuildingBlocks
 ```
 
 ### Cấu hình
@@ -54,7 +54,7 @@ Thêm section RabbitMQ vào file `appsettings.json` của dự án:
 
 Trong file `Program.cs`, gọi hàm extension để đăng ký cả Publisher và Consumer:
 ```bash
-using SharedLibrary.Extensions;
+using Nexus.BuildingBlocks.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -98,7 +98,7 @@ public class OrdersController : ControllerBase
 
 ```⚠️ QUAN TRỌNG: Luôn đặt logic đăng ký (Subscribe) bên trong hàm ExecuteAsync và sử dụng Task.Yield() hoặc để nó chạy ngầm. TUYỆT ĐỐI KHÔNG đặt trong StartAsync vì sẽ làm treo ứng dụng (block Swagger).```
 ```bash
-using SharedLibrary.Interfaces;
+using Nexus.BuildingBlocks.Interfaces;
 
 public class OrderProcessingService : BackgroundService
 {
